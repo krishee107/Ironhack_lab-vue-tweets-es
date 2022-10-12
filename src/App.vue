@@ -1,6 +1,6 @@
 <template>
     <div class="app">
-        <Tweet />
+        <Tweet :tweets="tweets"/>
     </div>
 </template>
   
