@@ -1,5 +1,5 @@
    <template>
-    <div class="tweet" v-for="tweet in tweets">
+    <div class="tweet" >
         <ProfileImage :image="tweet.user.image"/>
 
         <div class="body">
@@ -32,6 +32,15 @@ import Timestamp from './Timestamp.vue';
 import Message from './Message.vue';
 
 const props = defineProps({
-    tweets:Array
+    tweet:{
+        user: {
+            image: String,
+            name: String,
+            handle: String
+        },
+        timestamp: String,
+        message: String
+    }
 })
+console.log(props)
 </script>
